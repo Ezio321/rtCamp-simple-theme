@@ -80,7 +80,7 @@ get_header();
                 <div class="container child-pages-container">
 				<div class="row">
 					<div class="col-md-3 col-4-pad">
-					<div class="button-container">
+					<div class="button-container">	
 					  <button class="buttonlinks" onmouseover="Page(event, 'Page1')" onClick="Page(event, 'Page1')" id="default">FINDING</button>
 					  <button class="buttonlinks" onmouseover="Page(event, 'Page2')">PROMOTIONAL ACTIVITIES</button>
 					  <button class="buttonlinks" onmouseover="Page(event, 'Page3')">ENVIRONMENT</button>

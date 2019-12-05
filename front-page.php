@@ -116,6 +116,7 @@ get_header();
 							<a class="featured-post-title simple-link" href="<?php echo $page_link; ?>">
 								<?php echo $page_img; ?>
 	                 	      	<p class="featured-post-title simple-link"><?php echo $page_title; ?></p>
+								<br/>
 	                 	      	<p class="post-excerpt"><?php echo $page_excerpt; ?></p>
 	                       	</a>
 						</div>	
@@ -154,6 +155,7 @@ get_header();
 							<a class="featured-post-title simple-link" href="<?php echo $page_link; ?>">
 								<?php echo $page_img; ?>
 	                 	      	<p class="featured-post-title simple-link"><?php echo $page_title; ?></p>
+								<br/>
 	                 	      	<p class="post-excerpt"><?php echo $page_excerpt; ?></p>
 	                       	</a>
 						</div>	
@@ -191,6 +193,7 @@ get_header();
 							<a class="featured-post-title simple-link" href="<?php echo $page_link; ?>">
 								<?php echo $page_img; ?>
 	                 	      	<p class="featured-post-title simple-link"><?php echo $page_title; ?></p>
+								<br/>
 	                 	      	<p class="post-excerpt"><?php echo $page_excerpt; ?></p>
 	                       	</a>
 						</div>	

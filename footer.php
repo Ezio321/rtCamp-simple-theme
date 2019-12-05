@@ -36,7 +36,15 @@
 
 				<div class="col-md-4 footer-logo">
 					<aside id="sidebar-footerlogo" class="sidebar">
-							<?php dynamic_sidebar( 'footerlogo' ); ?>
+							<?php if ( is_active_sidebar( 'footerlogo' ) ) { ?>
+   							     <?php dynamic_sidebar( 'footerlogo' ); ?>
+							<?php }
+								else{
+							?>
+								<div class=default-logo>
+								<h1> <a href="#"> <img src="<?php bloginfo( 'template_directory' ) ?>/lib/Slices/footer-logo.png" alt="footerlogo"/>  </a> </h1>
+								</div>
+							<?php } ?>
 					</aside><!-- #touch 3-->
 				</div>
 			</div>

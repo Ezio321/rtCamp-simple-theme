@@ -136,12 +136,12 @@ get_header();
 							if(get_page_title_for_slug(' PROMOTIONAL ACTIVITIES ') == FALSE ) {
 								?>
 									<div class="notice">
-										<p> Create  a page with title PROMOTIONAL ACTIVITIES </p>
+										<p> Create  a page with title ENVIORNMENT </p>
 									</div>
 								<?php
 							}
 							else{
-							$Home_finding = get_page_by_title( 'PROMOTIONAL ACTIVITES');
+							$Home_finding = get_page_by_title( 'PROMOTIONAL ACTIVITIES');
 							$child_pages = get_page_children($Home_finding->ID, $all_pages);
 
 							foreach ( $child_pages as $pages ){
@@ -162,7 +162,7 @@ get_header();
 						<?php }
 							}
 						?>
-					</div>
+                    </div>
 
 					<div id="Page3" class="col-md-9 tabcontent">
 					<?php 

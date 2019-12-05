@@ -11,45 +11,60 @@
 
 ?>
 	</div><!-- #content -->
+	<!-- Starting Point of Custom Footer Widget Area -->
 	
-	<div class="container custom-sidebar" id="widget_area">
-		<div class="row">
-			<div class="col-sm-6 col-md-3">
-				<h4>Latest news</h4>
-					<div class="dashed">
-						<aside id="sidebar-primary" class="sidebar">
-							<?php dynamic_sidebar( 'primary' ); ?>
-						</aside><!-- #news -->
-					</div>
-			</div>
-			<div class="col-sm-6 col-md-3">
-				<h4>Recent Projects</h4>
-					<div class="dashed" id="recent_projects">
-						<aside id="sidebar-secondary" class="sidebar">
-							<?php 
-							dynamic_sidebar( 'secondary' ); ?>
-						</aside><!-- #projects -->
-					</div>
-			</div>
-			<div class="col-sm-6 col-md-3">
-				<h4>Stay in Touch</h4>
-					<div class="dashed" id="stay_in_touch">
-						<aside id="sidebar-ternary" class="sidebar">
-						
-							<?php require_once('lib/inc/socialmedia-widget.php'); 
-							dynamic_sidebar( 'ternary' ); ?>
-						</aside><!-- Social Media Profile -->
-					</div>
-			</div>
-			<div class="col-sm-6 col-md-3">
-				<h4>Security & Privacy</h4>
-					<div class="dashed" id="security">
-					<?php 
-							dynamic_sidebar( 'security' ); ?>	
-					</div>
-			</div>
-		</div>
-	</div>
+	<footer id="widget_area" class="site-footer">
+			<div class="site-info">
+				<div class="footer-widget-area">
+					<div class="container">
+						<div class="row" >
+							<div class="col-3 footer-area-1">
+								<h4>Latest news</h4>
+								<div class="dashed" id="latest_news">
+									<?php
+									if(is_active_sidebar('primary')){
+									dynamic_sidebar('primary');
+									}
+									?>
+								</div>
+							</div><!-- .footer-widget-area-1 -->
+							<div class="col-3 footer-area-2">
+							<h4>Recent Project</h4>
+								<div class="dashed" id="recent_projects">
+									<?php
+									if(is_active_sidebar('secondary')){
+									dynamic_sidebar('secondary');
+									}
+									?>
+								</div>
+							</div><!-- .footer-widget-area-2 -->
+							<div class="col-3 footer-area-3">
+							<h4>Stay in touch</h4>
+								<div class="dashed" id="stay_in_touch">
+									<?php
+										require_once('lib/inc/socialmedia-widget.php');
+										if(is_active_sidebar('ternary')){
+										dynamic_sidebar('ternary');
+									}
+									?>
+								</div>
+							</div><!-- .footer-widget-area-3 -->
+							<div class="col-3 footer-area-4">
+							<h4>Security and Privacy</h4>
+								<div class="dashed" id="security">
+									<?php
+									if(is_active_sidebar('security')){
+									dynamic_sidebar('security');
+									}
+									?>
+								</div>
+							</div><!-- .footer-widget-area-4 -->  
+						</div><!-- .row -->
+					</div><!-- .container-->
+				</div><!-- .footer-widget-area -->
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+
 	<hr id="site-footer-hr">
 	
 	<div id="site-footer">
@@ -75,21 +90,14 @@
 
 				<div class="col-md-4 footer-logo">
 					<aside id="sidebar-footerlogo" class="sidebar">
-							<?php if ( is_active_sidebar( 'footerlogo' ) ) { ?>
-   							     <?php dynamic_sidebar( 'footerlogo' ); ?>
-							<?php }
-								else{
-							?>
-								<div class=default-logo>
-								<h1> <a href="#"> <img src="<?php bloginfo( 'template_directory' ) ?>/lib/Slices/footer-logo.png" alt="footerlogo"/>  </a> </h1>
-								</div>
-							<?php } ?>
+							<?php dynamic_sidebar( 'footerlogo' ); ?>
 					</aside><!-- #touch 3-->
 				</div>
 			</div>
 		</div>
 	</div>						
 </div><!-- #page -->
+
 
 <?php wp_footer(); ?>
 
